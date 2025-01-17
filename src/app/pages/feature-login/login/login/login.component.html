@@ -1,4 +1,45 @@
+<app-default-login-layout title="introduza o account"
+primaryBtnText = "Login Now"
+secundaryBtnText="Signup Now"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!loginForm.valid">
 
+<form [formGroup]="loginForm">
+
+  <app-primary-input
+  formControlName="email"
+  inputName="email"
+  type="email"
+  label="Email"
+  placeholder="cinthia@gmail.com"
+>
+
+</app-primary-input>
+
+<app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Password"
+            placeholder="Enter your password"
+            >
+
+        </app-primary-input>
+
+        <span (click)="navigateForgot()"> Forgot password? </span>
+
+
+
+
+
+
+
+
+
+</form>
+
+</app-default-login-layout>
 
 
 
